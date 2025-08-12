@@ -16,7 +16,7 @@
     "ghcr.io/devcontainers/features/common-utils:2": {
       "installZsh": false,
       "installOhMyZsh": false,
-      "packages": "libglpk40 libglpk-dev"
+      "packages": "libglpk40 libglpk-dev build-essential gfortran"
 	}
   },
   // Ensure the default RStudio Server port is automatically forwarded
@@ -33,4 +33,8 @@
   "postAttachCommand": {
       "rstudio-start": "rserver"
   }
+	,
+  // Install igraph after the container is up
+  "postCreateCommand": "R -e \"install.packages('igraph', repos='https://packagemanager.rstudio.com/all/latest')\""
 }
+
