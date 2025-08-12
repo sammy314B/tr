@@ -16,7 +16,7 @@
     "ghcr.io/devcontainers/features/common-utils:2": {
       "installZsh": false,
       "installOhMyZsh": false,
-      "packages": "libglpk40"
+      "packages": "libglpk40 libglpk-dev"
 	}
   },
   // Ensure the default RStudio Server port is automatically forwarded
